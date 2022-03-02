@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    min-width: 320px;
+    min-height: 100%;
+    margin: 0 auto;
+    background: lightcyan;
+    border-radius: 20px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+footer, header {
+    padding: 0 20px;
+}
+
+/*-------------------------------------------------------------------------------header-----------------------------------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu_item {
+    margin: 5px 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_item {
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+}
+
+/*-------------------------------------------------------------------------------main-catalog-----------------------------------------------------------------------------------------------*/
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.catalog_item {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+    width: 20%;
+}
+
+.catalog_item img {
+    width: 100%;
+}
+
+@media (max-width: 1079px){
+    .catalog_item {
+        width: 28%;
+    }
+}
+
+@media (max-width: 576px) {
+    .catalog_item {
+        width: 40%;
+        margin: 20 px 2%;
+    }
+}
+
+/*-------------------------------------------------------------------------------footer-----------------------------------------------------------------------------------------------*/
+
+.pict {
+    width: 100%;
+}
